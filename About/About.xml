@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>An Unfortunate Misfeed</name>
+  <author>Lempface</author>
+  <targetVersion>0.17.0</targetVersion>
+  <description>
+    V1.0
+    Guns can jam! 
+
+    This mod adds a chance for a gun to jam when firing. This chance is based on the quality of the firearm. A pawn will attempt to clear the jam when they would next fire. Clearing a jam is based on the shooting skill of the weapon holder.
+  </description>
+</ModMetaData>
