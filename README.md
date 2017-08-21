@@ -5,7 +5,15 @@ A RimWorld mod that adds the chance for guns to jam.
 [HugsLib](https://github.com/UnlimitedHugs/RimworldHugsLib)
 
 ## Features
-Guns jam based on the quality of the gun. These percentages can be altered using the HugsLib in game mod settings.
+### v0.2
+Guns may now be damaged when they jam. There are two settings in the HugsLib in-game mod settings to control this.
+Damage on Jam Percentage: (default) 20%
+Damage on Jam Amount: (default) 1 HP
+
+As guns become more and more damaged, the chance to jam increases.
+
+### v0.1
+Guns jam based on the quality of the gun. These percentages can be altered using the HugsLib in-game mod settings.
 
 If a pawn tries to fire a jammed gun, they will attempt to clear the jam first. The chance of success is based on the pawns shooting skill. There is a minimum 20% chance to clear a jam, and the chance goes up by 5% for each experience level in shooting.
 
