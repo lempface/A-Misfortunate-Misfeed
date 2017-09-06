@@ -5,6 +5,16 @@ A RimWorld mod that adds the chance for guns to jam.
 [HugsLib](https://github.com/UnlimitedHugs/RimworldHugsLib)
 
 ## Features
+### v1.0
+
+Added a chance for a gun to misfire and explode. Size of explosion based on ammunition.
+Added a chance for a jammed gun to be destroyed due to the misfire.
+Added a Jinxed trait that makes jamming and explosions happen at a higher rate.
+Added a Proficient Armsman trait that allows for 100% chance to unjam a weapon.
+Added a jamming gun sound effect.
+
+Bugfixes:
+Restored ability for turrets to fire. Turrets now skip jam checking entirely.
 ### v0.2
 Guns may now be damaged when they jam. There are two settings in the HugsLib in-game mod settings to control this.
 Damage on Jam Percentage: (default) 20%
@@ -21,7 +31,4 @@ If a pawn tries to fire a jammed gun, they will attempt to clear the jam first. 
 [Releases](https://github.com/lempface/An-Unfortunate-Misfeed/releases)
 
 ## Road map
-* Add a chance for a gun to misfire and explode. Size of explosion based on ammunition.
-* Add a chance for a jammed gun to be destroyed due to the misfire.
-* Add a Jinxed trait that makes jamming and explosions happen at a higher rate.
-* Add a Proficient Armsman trait that allows for 100% chance to unjam a weapon.
+* Empty - Suggest something!
