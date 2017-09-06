@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TraitDefs>
+  <TraitDef>
+    <defName>Jinxed</defName>
+    <commonality>0.2</commonality>
+    <degreeDatas>
+      <li>
+        <label>jinxed</label>
+        <description>Guns fired by NAME jam at a higher rate!</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>ProficientArmsman</li>
+    </conflictingTraits>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>ProficientArmsman</defName>
+    <commonality>0.2</commonality>
+    <degreeDatas>
+      <li>
+        <label>proficient armsman</label>
+        <description>NAME can always unjam a weapon on the first attempt.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Jinxed</li>
+    </conflictingTraits>
+  </TraitDef>
+</TraitDefs>
