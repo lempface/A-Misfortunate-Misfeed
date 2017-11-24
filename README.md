@@ -5,6 +5,11 @@ A RimWorld mod that adds the chance for guns to jam.
 [HugsLib](https://github.com/UnlimitedHugs/RimworldHugsLib)
 
 ## Features
+### v1.0.1
+Bugfixes:
+Mechanoids could not shoot at all, excluded them from the jamming system.
+Grenades and Neolithic Weapons should not have a chance to jam, excluded them from the jamming system.
+
 ### v1.0
 
 Added a chance for a gun to misfire and explode. Size of explosion based on ammunition.
