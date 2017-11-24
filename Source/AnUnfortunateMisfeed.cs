@@ -106,11 +106,37 @@ namespace Lempface.Mods.Rimworld
                 const int maxSkillLevel = 20;
 
                 var pawn = __instance.CasterPawn;
-
+                
                 // if this is not a Pawn, like a turret, continue shot
                 if (!__instance.CasterIsPawn)
                 {
                     logger.Trace("Caster is not a pawn.");
+                    return true;
+                }
+
+                // Check for mechanoid, these do not have shooting skill so skip jam check
+                if (pawn.kindDef.race.defName.StartsWith("Mechanoid"))
+                {
+                    logger.Trace("Caster is a mechanoid.");
+                    return true;
+                }
+
+                var weapon = __instance.ownerEquipment;
+
+                // Filter out weapons that should not have the ability to jam, grenades, bows, etc...
+                var grenadesCategory = weapon.def.thingCategories.Find((x) => x.defName == "Grenades");
+
+                if (grenadesCategory != null)
+                {
+                    logger.Trace("Weapon is non-jammable: grenade");
+                    return true;
+                }
+
+                var neolithicRangedTag = weapon.def.weaponTags.Find((x) => x == "NeolithicRanged");
+
+                if (neolithicRangedTag != null)
+                {
+                    logger.Trace("Weapon is non-jammable: Neolithic Ranged");
                     return true;
                 }
 
@@ -120,7 +146,7 @@ namespace Lempface.Mods.Rimworld
                 var damageOnJamAmount = settings.GetHandle<int>("damageOnJamAmount").Value;
                 var criticalFailurePercentage = settings.GetHandle<float>("criticalFailurePercentage").Value;
 
-                var weapon = __instance.ownerEquipment;
+                
                 var compQuality = weapon.GetComp<CompQuality>();
                 var compJammable = GetCompJammable(weapon);
 
